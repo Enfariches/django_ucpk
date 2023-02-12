@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block navig_btn_f %}
+    nav-link active
+{% endblock %}
+{% load static %}
+{% block content %}
+    <div class="wrap">
+           <div class="crumbs"><a href="https://cpk-ural.ru">Главная</a> / <span>Заявка на обучение</span></div>
+    <section class="callback1" id="callback_online">
+<div class="page">
+
+<form action="" method="POST" class="bootstrap standart-form form-horizontal" id="message" enctype="multipart/form-data">
+        <div class="control-group"><label class="control-label" for="i_name">Ваше имя: <span>*</span></label><div class="controls"><input type="text" name="name" id="i_name" class="span7 forvalidation value_Null" placeholder="" autofocus="" value="" required="" idel="1" after_this="after1" valid="false"><p id="after1" class="valid_after"> &nbsp; </p></div>
+                      </div><div class="control-group"><label class="control-label" for="i_mail">Ваш E-mail:</label><div class="controls"><input type="email" name="mail" id="i_mail" class="span7 forvalidation  value_Null" placeholder="E-mail" value="" idel="2" after_this="after2" valid="false"><p id="after2" class="valid_after"> &nbsp; </p></div>
+                      </div><div class="control-group"><label class="control-label" for="i_squery">Текст сообщения: <span>*</span></label><div class="controls"><textarea name="squery" id="i_squery" class="span7 forvalidation  value_Null" style="height:100px" required="" idel="3" after_this="after3" valid="false"></textarea><p id="after3" class="valid_after"> &nbsp; </p></div>
+                      </div>        <div class="control-group">
+        <label class="control-label" for="">
+
+        </label>
+        <div class="controls-rows controls">
+           <div class="fileupload fileupload-new" data-provides="fileupload"><input type="hidden">
+              <span class="btn btn-file">
+                  <span class="fileupload-new"><i class="icon-download-3"></i> Добавить файл</span>
+                  <span class="fileupload-exists">вырбать другой</span>
+                  <input type="file" name="file0">
+              </span>
+              <span class="fileupload-preview">
+              </span>
+              <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+
+            </div>
+        </div>
+      </div>
+    <div class="control-group ">
+        <label class="control-label" for=""></label>
+        <div class="controls">
+            <div class=""><span class="help-inline gray_color">Максимальный размер файла: <b>10 Мб</b></span></div>
+            <div class=""><span class="help-inline gray_color">Допустимые расширения файлов: <b>png, jpg, jpeg, doc, docx, odt, ods, odp, txt, rtf, pdf, xls, xlsx, ods, ppt, pptx, pptm, odp, rar, zip, 7z, cab, gzip, tar</b></span></div><br>
+        </div>
+    </div>
+                <div class="control-group">
+                <div class="controls">
+            <div class="g-recaptcha" data-sitekey="6LdhUREUAAAAAAyPDpJDLnUGTSAjwjqBW6OeOORi"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdhUREUAAAAAAyPDpJDLnUGTSAjwjqBW6OeOORi&amp;co=aHR0cHM6Ly9jcGstdXJhbC5ydTo0NDM.&amp;hl=ru&amp;v=gEr-ODersURoIfof1hiDm7R5&amp;size=normal&amp;cb=61u599dz9zyh" width="304" height="78" role="presentation" name="a-n8pdoxz4hdfk" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+        </div>
+    </div>
+        <div class="control-group">
+        <div class="controls">
+            <p class="">Поля отмеченные <span style="color:red">*</span> обязательны для заполнения</p>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button name="submit_x" class="btn" disabled="disabled">Отправить</button>
+        </div>
+    </div>
+</form>
+</div>
+</section>
+
+<script src="/js/jquery.validation_form.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.fileupload').fileupload();
+    var options_comment = {
+        validation_form: ".standart-form" ,//class формы, которую будем проверять
+        only_visible: false ,
+        submit: "submit_x" ,
+        blur_all: false ,
+        min_user: 3,
+        important_marker: ""
+        }
+       $().validateThis(options_comment);
+
+    });
+</script>
+
+    </div>
+{% endblock %}

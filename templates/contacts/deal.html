@@ -1,0 +1,209 @@
+{% extends "base.html" %}
+{% block navig_btn_d %}
+    nav-link active
+{% endblock %}
+{% load static %}
+{% block content %}
+    <div class="wrap">
+           <div class="crumbs"><a href="/">Главная</a> / <a href="/contacts/">Контакты</a> / <span>Обращения граждан</span></div>
+    <section class="callback1" id="priemnaya">
+<div class="page">
+<form action="?new" method="POST" class="bootstrap standart-form form-horizontal" id="message" enctype="multipart/form-data">
+    <!--div class="control-group ">
+        <label class="control-label" for="i_category_id"></label>        <div class="controls">
+        <input type=''  name='category_id' id='i_category_id'  value=''  >        </div>
+    </div>
+    <div class="control-group ">
+        <label class="control-label" for="i_recipient"></label>        <div class="controls">
+        <input type=''  name='recipient' id='i_recipient'  value=''  >        </div>
+    </div-->
+    <table class="as_block_mobile" width="100%" cellpadding="0" cellspacing="0" \="">
+        <tbody><tr valign="top">
+            <td>
+                <div class="control-group ">
+                    <label class="control-label" for="i_name2">Фамилия: <span>*</span></label>                    <div class="controls">
+                    <input type="text" name="name2" id="i_name2" class="span7 forvalidation  value_Null" placeholder="" value="" required="" idel="1" after_this="after1" valid="false"><p id="after1" class="valid_after"> &nbsp; </p>                    </div>
+                </div>
+                <div class="control-group ">
+                    <label class="control-label" for="i_name1">Имя : <span>*</span></label>                    <div class="controls">
+                    <input type="text" name="name1" id="i_name1" class="span7 forvalidation  value_Null" placeholder="" value="" required="" idel="2" after_this="after2" valid="false"><p id="after2" class="valid_after"> &nbsp; </p>                    </div>
+                </div>
+                <div class="control-group ">
+                    <label class="control-label" for="i_name3">Отчество (если есть):</label>                    <div class="controls">
+                    <input type="text" name="name3" id="i_name3" class="span7 forvalidation  value_Null" placeholder="" value="" idel="3" after_this="after3" valid="false"><p id="after3" class="valid_after"> &nbsp; </p>                    </div>
+                </div>
+            </td>
+            <td width="20px" class="hide_mobile"></td>
+            <td width="25%">
+                <div class="gray_bg fz12 p20 mt10">
+                    <p>Ф.И.О должны быть заполнены в соответсвиис паспортными данными. Поле заполняется по-русски, для нерезидентов РФ допускается заполнение на английском языке</p>
+                    <hr>
+                    <p class="mb5">
+                        <b>Пример:</b>
+                    </p>
+                    <p>Фамилия: <i>Сидоров</i></p>
+                    <p>Имя: <i>Иван</i></p>
+                    <p>Отчество: <i>Петрович</i></p>
+                    <!--p>По-английски: <i>Ivan P Sidorov</i></p-->
+                </div>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <div class="control-group ">
+                    <label class="control-label" for="i_address">Почтовый адрес:</label>                    <div class="controls">
+                    <textarea name="address" id="i_address" class="span7 forvalidation  value_Null" style="height:80px;margin-top:10px" idel="4" after_this="after4" valid="false"></textarea><p id="after4" class="valid_after"> &nbsp; </p>                    </div>
+                </div>
+           </td>
+            <td width="20px" class="hide_mobile"></td>
+            <td width="25%">
+                <div class="gray_bg fz12 p20 mt10">
+                    <p class="mb5">
+                      В почтовом адресе необходимо указать: название улицы, номер дома, номер квартиры; название населенного пункта (города, поселка и т.п.); название района; название республики, края, области, автономного округа (области))</p>
+                </div>
+            </td>
+        </tr>
+
+        <tr valign="top">
+            <td colspan="3">
+
+                <div class="control-group ">
+                    <label class="control-label" for="i_phone">Номер телефона:</label>                    <div class="controls">
+                    <input type="text" name="phone" id="i_phone" class="span7 forvalidation number_phone value_Null" value="" idel="5" after_this="after5" valid="false"><p id="after5" class="valid_after"> &nbsp; </p>                    </div>
+                </div>
+                <div class="control-group ">
+                    <label class="control-label" for="i_email">Адрес электронной почты для получения ответа или уведомления о переадресации обращения: <span>*</span></label>                    <div class="controls">
+                    <input type="email" name="email" id="i_email" class="span7 forvalidation value_Null" placeholder="E-mail" value="" required="" idel="6" after_this="after6" valid="false"><p id="after6" class="valid_after"><div class="invalid_message"><div class="bubble-arrow-border error-bubble"></div><div class=" bubble-arrow"></div>некорректный email</div></p>                    </div>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+    </tbody></table>
+
+    <div class="control-group ">
+        <label class="control-label" for="i_msg">Текст сообщения: (изложите суть предложения, заявления или жалобы) <span>*</span></label>        <div class="controls">
+        <textarea name="msg" id="i_msg" class="span7 forvalidation value_Null" style="height:100px" required="" idel="7" after_this="after7" valid="false"></textarea><p id="after7" class="valid_after"> &nbsp; </p>        </div>
+    </div>
+         <div class="control-group">
+        <label class="control-label" for="">
+        </label>
+        <div class="controls-rows controls">
+           <div class="fileupload fileupload-new" data-provides="fileupload"><input type="hidden">
+              <span class="btn btn-file">
+                  <span class="fileupload-new"><i class="icon-download-3"></i> Добавить файл</span>
+                  <span class="fileupload-exists">вырбать другой</span>
+                  <input type="file" name="file0" accept=".png,.jpg,.jpeg,.doc,.docx,.odt,.ods,.odp,.txt,.rtf,.pdf,.xls,.xlsx,.ods,.ppt,.pptx,.pptm,.odp,.rar,.zip,.7z,.cab,.gzip,.tar">
+              </span>
+              <span class="fileupload-preview">
+              </span>
+              <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+
+            </div>
+        </div>
+      </div>
+    <div class="control-group ">
+        <label class="control-label" for=""></label>
+        <div class="controls">
+            <div class=""><span class="help-inline gray_color">Максимальный размер файла: <b>10 Мб</b></span></div>
+            <div class=""><span class="help-inline gray_color">Допустимые расширения файлов: <b>png, jpg, jpeg, doc, docx, odt, ods, odp, txt, rtf, pdf, xls, xlsx, ods, ppt, pptx, pptm, odp, rar, zip, 7z, cab, gzip, tar</b></span></div><br>
+        </div>
+    </div>
+         <div class="gray_bg p15 mb10">
+         <p><span style="color:red">*</span> отмечены поля обязательные для заполнения</p>
+     </div>
+    <div class="mb30">
+            <div style="text-align: justify;">
+	В соответствии с <a href="http://letters.kremlin.ru/info-service/acts/2" target="_blank">частью 1 статьи 7 Федерального закона от 2 мая 2006 года № 59-ФЗ «О порядке рассмотрения обращений граждан Российской Федерации»</a> гражданин в своем обращении в обязательном порядке излагает суть предложения, заявления или жалобы.</div>
+<div>
+	&nbsp;</div>
+<div style="text-align: justify;">
+	Обращаем Ваше внимание, что в целях объективного и всестороннего рассмотрения Вашего обращения рекомендуется в тексте обращения указывать адрес описанного Вами места действия, факта или события.</div>
+<div>
+	&nbsp;</div>
+<div style="text-align: justify;">
+	В случае, если текст Вашего обращения не позволяет определить суть предложения, заявления или жалобы, ответ на обращение не дается и оно не подлежит направлению на рассмотрение в государственный орган, орган местного самоуправления или должностному лицу в соответствии с их компетенцией, о чем Вам будет сообщено в течение семи дней со дня регистрации обращения.</div>
+<div>
+	&nbsp;</div>
+<div style="text-align: justify;">
+	Обращаем Ваше внимание, что при написании текста обращения в форме электронного документа в поле ввода текста обращения в форме электронного документа для изложения сути предложения, заявления или жалобы отсутствует ограничение по вводимому количеству символов.</div>
+<div>
+	&nbsp;</div>
+<div style="text-align: justify;">
+	В случае необходимости в подтверждение своих доводов Вы вправе приложить к обращению необходимые документы и материалы в электронной форме, воспользовавшись функцией «Прикрепить файл(ы)».</div>
+<div>
+	&nbsp;</div>
+<div style="text-align: justify;">
+	Обращаем Ваше внимание, что прикрепляемые в предложенном на сайте формате документы и материалы только подтверждают изложенную Вами суть предложения, заявления или жалобы.</div>
+<div>
+	&nbsp;</div>
+<div style="text-align: justify;">
+	Приложить необходимые документы и материалы в электронной форме Вы можете в любой последовательности в форматах png, jpg, jpeg, doc, docx, odt, ods, odp, txt, rtf, pdf, xls, xlsx, ods, ppt, pptx, pptm, odp, rar, zip, 7z, cab, gzip, tar.</div>
+<div>
+	&nbsp;</div>
+<div style="text-align: justify;">
+	Иные форматы не обрабатываются в информационных системах Официальный сайт НОЧУ ДПО "Уральский центр подготовки кадров".</div>
+<div>
+	&nbsp;</div>
+<div style="text-align: justify;">
+	Информируем Вас, что передача файла(ов) вложения на почтовый сервер зависит от пропускной способности сети «Интернет» пользователя, а получение – от объёма обрабатываемых почтовым сервером переданных файлов.</div>
+<div>
+	&nbsp;</div>
+<div style="text-align: justify;">
+	При подключении Вашего оборудования к сети «Интернет» по выделенным каналам связи с использованием технологий ADSL, 3G, 4G, WiFi и иных технологий, обеспечивающих аналогичные скорости передачи данных в сети «Интернет», передача и обработка файла(ов) с суммарным размером:</div>
+<div>
+	&nbsp;</div>
+<ul>
+	<li>
+		до 5 Мб осуществляется, как правило, без задержки во времени;</li>
+	<li>
+		от 5 Мб до 10 Мб может осуществляться с задержкой во времени;</li>
+	<li>
+		свыше 10 Мб может быть не осуществлена.</li>
+</ul>
+<div>
+	&nbsp;</div>
+<div>
+	Для приложения к обращению необходимых документов и материалов в электронной форме нажмите кнопку «Прикрепить файл».</div>
+    </div>
+    <div class="control-group ">
+        <div class="controls">
+        <input type="checkbox" name="maybe_published" id="maybe_published" value="1" checked="" class="dib mr10 va_m">
+        <label for="maybe_published" class="dib va_m mr10 mb0">Разрешаю опубликовать обращение на сайте</label>
+        </div>
+    </div>
+
+        <div class="control-group">
+                <div class="controls">
+            <div class="g-recaptcha" data-sitekey="6LdhUREUAAAAAAyPDpJDLnUGTSAjwjqBW6OeOORi"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdhUREUAAAAAAyPDpJDLnUGTSAjwjqBW6OeOORi&amp;co=aHR0cHM6Ly9jcGstdXJhbC5ydTo0NDM.&amp;hl=ru&amp;v=gEr-ODersURoIfof1hiDm7R5&amp;size=normal&amp;cb=7ykqr3izxh47" width="304" height="78" role="presentation" name="a-n4g79tljg8bk" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+            <!--a href="#" id="refresh_captcha" class="fl mr10" title="Обновить картинку"></a>
+                        <img src="https://cpk-ural.ru/app/libs/captcha.php" alt="captcha" id="captchaimg"/-->
+        </div>
+    </div>
+        <div class="control-group">
+        <div class="controls">
+            <button name="submit_x" class="btn" disabled="disabled">Отправить</button>
+        </div>
+    </div>
+</form>
+</div>
+</section>
+
+<script src="/js/jquery.validation_form.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.fileupload').fileupload();
+    var options_comment = {
+        validation_form: ".standart-form" ,//class формы, которую будем проверять
+        only_visible: false ,
+        submit: "submit_x" ,
+        blur_all: false ,
+        min_user: 3,
+        important_marker: ""
+        }
+           $().validateThis(options_comment);
+
+    });
+</script>
+
+    </div>
+{% endblock %}

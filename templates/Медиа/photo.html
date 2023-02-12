@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block navig_btn_h %}
+    nav-link active
+{% endblock %}
+{% load static %}
+{% block content %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap 4 - Создание адаптивной галереи изображений с помощью сетки</title>
+    <!-- Bootstrap CSS -->
+    <link href="путь_до/bootstrap.min.css" rel="stylesheet">
+    <!-- fancyBox3 CSS -->
+    <link href="путь_до/jquery.fancybox.min.css" rel="stylesheet">
+    <style>
+        .thumb img {
+            -webkit-filter: grayscale(0);
+            filter: none;
+            border-radius: 5px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+
+        .thumb img:hover {
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+
+        .thumb {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="h3 text-center my-4">Фотогалерея</h1>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/галер6.jpg">
+                <img class="img-fluid" src="/media/images/галер6.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/галер5.jpg">
+                <img class="img-fluid" src="/media/images/галер5.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/галер_замена.jpg">
+                <img class="img-fluid" src="/media/images/галер_замена.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/галер_замена1.jpg">
+                <img class="img-fluid" src="/media/images/галер_замена1.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/галер4.jpg">
+                <img class="img-fluid" src="/media/images/галер4.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/галер3.jpg">
+                <img class="img-fluid" src="/media/images/галер3.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/галер_замена2.png">
+                <img class="img-fluid" src="/media/images/галер_замена2.png" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/галер_замена3.jpg">
+                <img class="img-fluid" src="/media/images/галер_замена3.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/ряд1.jpg">
+                <img class="img-fluid" src="/media/images/ряд1.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/ряд2.jpg">
+                <img class="img-fluid" src="/media/images/ряд2.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/ряд3.jpg">
+                <img class="img-fluid" src="/media/images/ряд3.jpg" alt="...">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="/media/images/ряд4.jpg">
+                <img class="img-fluid" src="/media/images/ряд4.jpg" alt="...">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="путь_до/jquery-3.2.1.min.js"></script>
+<!-- Popper -->
+<script src="путь_до/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="путь_до/bootstrap.min.js"></script>
+<!-- fancyBox -->
+<script src="путь_до/jquery.fancybox.min.js"></script>
+</body>
+{% endblock %}

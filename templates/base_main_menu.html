@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
+    <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
+    <title>НОЧУ ДПО "Уральский центр подготовки кадров", г.Екатеринбург</title>
+
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <link rel="icon" type="image/x-icon" href="/media/images/favicon.ico">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<header class="d-flex flex-wrap justify-content-center py-3 mb-3 border-bottom masthead"
+        style="background-image: url('/media/images/coverage-bg-03.jpg')">
+      <a href="/" class="d-flex  mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+
+          <center><img width="200" height="200"  src="https://uralstroyinfo.ru/images/news/slide/1565001203.png"></center>
+
+          <span class="fs-5">Негосударственное образовательное частное учреждение
+              <br>дополнительного профессионального образования <br> <h1 class="fs-2">Уральский Центр Подготовки Кадров <br>
+              </h1><span class="fs-5">г. Екатеринбург, ул. Чебышева, д. 6, оф. 319 <br>Телефон: +7 (343) 201-44-24
+                  <a href="/map">Карта сайта </a>&nbsp &nbsp &nbsp &nbsp &nbsp
+              </span>
+          </span>
+      </a>
+    <a href="#" id="specialButton"><img id="" src="/media/images/special.png"  alt="Версия для слабовидящих" title="Версия для слабовидящих"/> Версия для слабовидящих</a>
+</header>
+
+<header class="d-flex flex-wrap justify-content-center py-4 mb-4 border-bottom">
+      <ul class="nav nav-pills ">
+
+        <li class="nav-item"><a href="/" class="{% block navig_btn  %}nav-link link-dark{% endblock %} btn-xl ">Главная</a></li>
+        <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_my %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Cведения об образовательной организации
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li><a class="dropdown-item btn-xl" href="/main_info">Основные сведения</a></li>
+          <li><a class="dropdown-item btn-xl" href="/structur">Структура и органы управления образовательной организацией</a></li>
+          <li><a class="dropdown-item btn-xl" href="/document">Документы</a></li>
+          <li><a class="dropdown-item btn-xl" href="/education">Образование</a></li>
+            <li><a class="dropdown-item btn-xl" href="/education_standart">Образовательные стандарты</a></li>
+            <li><a class="dropdown-item btn-xl" href="/cast">Руководство. Педагогический (научно-педагогический) состав</a></li>
+            <li><a class="dropdown-item btn-xl" href="/security">Материально-техническое обеспечение и оснащенность образовательного процесса</a></li>
+            <li><a class="dropdown-item btn-xl" href="/scholarship">Стипендии и меры поддержки обучающихся</a></li>
+            <li><a class="dropdown-item btn-xl" href="/paid_services">Платные образовательные услуги</a></li>
+            <li><a class="dropdown-item btn-xl" href="/financially">Финансово-хозяйственная деятельность</a></li>
+            <li><a class="dropdown-item btn-xl" href="/vacant">Вакантные места для приема (перевода) обучающихся</a></li>
+            <li><a class="dropdown-item btn-xl" href="/accessible">Доступные среды</a></li>
+            <li><a class="dropdown-item btn-xl" href="/organ">Предписания органов, осуществляющих государственный контроль (надзор)</a></li>
+            <li><a class="dropdown-item btn-xl" href="/cooperation">Международное сотрудничество</a></li>
+            <li><a class="dropdown-item btn-xl" href="/distant">Дистанционное обучение</a></li>
+        </ul>
+        </div>
+        <li class="nav-item"><a href="/news" class="{% block navig_btn_c  %}nav-link link-dark{% endblock %} btn-xl ">Новости</a></li>
+        <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_g %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Информация
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li><a class="dropdown-item btn-xl" href="/independet">Независимая оценка качества образования</a></li>
+          <li><a class="dropdown-item btn-xl" href="/corruption">Противодействие коррупции</a></li>
+          <li><a class="dropdown-item btn-xl" href="/antiterrorist">Антитеррористическое просвещение</a></li>
+        </ul>
+        </div>
+        <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_b %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Направления обучения
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li><a class="dropdown-item btn-xl" href="/occupational_safety">Охрана труда</a></li>
+          <li><a class="dropdown-item btn-xl" href="/first_help">Первая помощь</a></li>
+          <li><a class="dropdown-item btn-xl" href="/professions">Профессии</a></li>
+          <li><a class="dropdown-item btn-xl" href="/teachers">Повышение квалификаций педагогов</a></li>
+        </ul>
+        </div>
+        <li class="nav-item"><a href="/application" class="{% block navig_btn_f %} nav-link link-dark {% endblock %} btn-xl">Заявка на обучение</a></li>
+         <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_e %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Педагогам
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li><a class="dropdown-item btn-xl" href="/attestation">Аттестация</a></li>
+          <li><a class="dropdown-item btn-xl" href="/cabinet">Методический кабинет</a></li>
+        </ul>
+        </div>
+        <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_h %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Медиа
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item btn-xl" href="/photo">Фотогалерея</a></li>
+          <li><a class="dropdown-item btn-xl" href="/404">Видеотека</a></li>
+          <li><a class="dropdown-item btn-xl" href="/quests">Опрос</a></li>
+        </ul>
+        </div>
+         <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_d %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Контакты
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item btn-xl" href="/contacts">Контакты</a></li>
+          <li><a class="dropdown-item btn-xl" href="/contacts/faq">Часто задаваемые вопросы</a></li>
+          <li><a class="dropdown-item btn-xl" href="/">Отзывы и предложения</a></li>
+          <li><a class="dropdown-item btn-xl" href="/">Обращения граждан</a></li>
+        </ul>
+        </div>
+      </ul>
+    </header>
+<section>
+    <h3 align="center" class="display-5 fs-2 mb-4">Направления обучения</h3>
+    <center>
+        <div class="container mb-4">
+              <div class="row justify-content-start">
+                    <div class="col-4">
+                          <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/охрана_труда.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/occupational_safety">Охрана труда</a></p>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="col-4">
+                         <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/высота.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/404">Высота</a></p>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="col-4">
+                         <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/электробезопасность.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/404">Электробезопасность</a></p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col-4">
+                         <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/Промышленная_безопасность.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/404">Промышленная безопасность</a></p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col-4">
+                         <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/пожарная_безопасность_ONJJoOE.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/404">Пожарная безопасность</a></p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col-4">
+                         <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/первая_помощь.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/first_help">Первая помощь</a></p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col-4">
+                         <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/экология.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/404">Экология</a></p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col-4">
+                         <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/гоичс.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/404">ГО и ЧС</a></p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col-4">
+                         <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/профессии.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/professions">Профессии</a></p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col-4">
+                         <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/повышениеквалприема.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/teachers">Повышение квалификации педагогов</a></p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col-4">
+                         <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/семинары.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text"><a href="/404">Семинары</a></p>
+                          </div>
+                        </div>
+                    </div>
+              </div>
+    </div>
+    </center>
+</section>
+<section class="masthead mb-4 py-4" style="background-image: url('/media/images/какмыработаем2.jpg')">
+    <div class="container text-center">
+        <div class="container mb-4">
+            <h3 align="center" class="display-5 fs-2 mb-4 text-white ">Как мы работаем</h3>
+            <center>
+              <div class="row justify-content-start">
+                    <div class="col">
+                          <div class="card border-0 bg-transparent" style="width: 10rem;">
+                          <img src="media/images/r04.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <p class="card-text text-white  fs-6">Наличный и безналичный расчет</p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col">
+                          <div class="card border-0 bg-transparent" style="width: 10rem;">
+                          <img src="media/images/r02.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <p class="card-text text-white fs-6">Отсрочка платежа</p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col">
+                          <div class="card border-0 bg-transparent" style="width: 10rem;">
+                          <img src="media/images/r01.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <p class="card-text text-white  fs-6">Выезд на предприятие</p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col">
+                          <div class="card border-0 bg-transparent" style="width: 10rem;">
+                          <img src="media/images/r05.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <p class="card-text text-white fs-6">Дистанционное обучение</p>
+                          </div>
+                        </div>
+                    </div>
+                  <div class="col">
+                          <div class="card border-0 bg-transparent" style="width: 10rem;">
+                          <img src="media/images/r03.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <p class="card-text text-white  fs-6">Система скидок</p>
+                          </div>
+                        </div>
+                    </div>
+              </div>
+            </center>
+        </div>
+    </div>
+</section>
+    <section>
+        <h3 align="center" class="display-5 fs-2 mb-4">Актуальные новости</h3>
+    <center>
+        <div class="container mb-4">
+              <div class="row justify-content-start">
+                    <div class="col-4">
+                          <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/АН1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text text-start"><a class="text-secondary">12 февраля 2021 |</a> <a href="/news/">Новости</a> <p class="text-start"> <a href="/news/news_new_site_obr/">Новый сайт образовательной организаций</a>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/АН2.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text text-start"><a class="text-secondary">9 октября 2020 |</a> <a href="/news/">Новости</a> <p class="text-start"> <a href="/news/medic_and_student/">Врач и студент</a>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/АН3.jpeg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text text-start"><a class="text-secondary">7 сентября 2020 |</a> <a href="/news/">Новости</a> <p class="text-start"> <a href="/news/greep/">Грипп - симптомы и профилактика</a>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/АН4.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text text-start"><a class="text-secondary">20 апреля 2020 |</a> <a href="/news/">Новости</a> <p class="text-start"> <a href="/news/hygienic/">О значении гигиенических процедур в период пандемии коронавируса</a>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/АН5.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text text-start"><a class="text-secondary">5 февраля 2021 |</a> <a href="/news/">Новости</a> <p class="text-start"> <a href="/news/prevention/">Профилактика гриппа и коронавирусной инфекции</a>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="card border-0" style="width: 20rem;">
+                          <img src="media/images/АН6.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                              <p class="card-text text-start"><a class="text-secondary">27 октября 2019 |</a> <a href="/news/">Новости</a> <p class="text-start"> <a href="/news/virus/">Энтеровирусная инфекция</a>
+                          </div>
+                          </div>
+                        </div>
+              </div>
+        </div>
+    </center>
+    </section>
+    <section class="masthead mb-4 py-4" style="background-image: url('/media/images/сотрудники.jpg')">
+        <div class="container text-center">
+        <div class="container mb-4">
+            <h3 align="center" class="display-5 fs-2 mb-4 text-black ">Наши сотрудники</h3>
+        </div>
+        </div>
+    </section>
+    <section class="d-flex justify-content-center">
+<div class="row d-flex justify-content-center mb-4 py-4">
+    <h3 align="center" class="display-5 fs-2 mb-4">Фотогалерея</h3>
+  <div class="col-lg-2 col-2">
+    <img
+      src="/media/images/галер3.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Boat on Calm Water"
+    />
+
+    <img
+      src="/media/images/галер1.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Wintry Mountain Landscape"
+    />
+  </div>
+
+  <div class="col-lg-2 col">
+    <img
+      src="/media/images/галер2.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Mountains in the Clouds"
+    />
+
+    <img
+      src="/media/images/галер4.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Boat on Calm Water"
+    />
+  </div>
+
+  <div class="col-lg-2 col">
+    <img
+      src="/media/images/галер5.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Waves at Sea"
+    />
+
+    <img
+      src="/media/images/browser_Tpc8S2JSjl.png"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Yosemite National Park"
+    />
+  </div>
+    <div class="col-lg-2 col">
+        <img
+      src="/media/images/browser_x8nwHh4GDh.png"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Yosemite National Park"
+    />
+    <img
+      src="/media/images/галер6.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Waves at Sea"
+    />
+  </div>
+</div>
+<!-- Gallery -->
+    </section>
+    <section class="d-flex justify-content-center mb-4 "><button type="button" class="btn btn-outline-primary">Смотреть все фото</button></section>
+    <section>
+  <div class="row d-flex justify-content-center mb-4 py-4">
+      <h3 class="text-center">Наши клиенты о нас</h3>
+    </div>
+
+  <div class="container mb-4" >
+  <div class="row row-cols-2 g-2 g-lg-3">
+    <div class="col-sm">
+      <div class="card" style="width: 14rem;">
+  <div class="card-body">
+    <h5 class="card-title">Светлана Игоревна</h5>
+    <h6 class="card-subtitle mb-2 text-muted">27.11.2020 11:31</h6>
+    <p class="card-text">Мне понравился Учебный центр. Обучение хорошее, диплом получила хороший. Спасибо!</p>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 16rem;">
+  <div class="card-body">
+    <h5 class="card-title">ООО "Хлеб и зрелища"</h5>
+    <h6 class="card-subtitle mb-2 text-muted">21.01.2021 13:43</h6>
+    <p class="card-text">Выражаем благодарность вашему коллективу за проведение обучения наших сотрудников и организацию их аттестации в Ростехнадзоре.
+        Подготовка наших сотрудников проводилась на высоком профессиональном уровне, …</p>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+     <div class="card" style="width: 16rem;">
+  <div class="card-body">
+    <h5 class="card-title">Кирилл</h5>
+    <h6 class="card-subtitle mb-2 text-muted">12.01.2021 09:22</h6>
+    <p class="card-text">Продолжаю обучаться в вашем центре и хочу сказать, что делаю это с огромным удовольствием.
+        Очень приветливо встретили, всё подробно рассказали, продолжают окружать заботой в прямом смысле - чай, конфетки, добрый совет, …</p>
+  </div>
+</div>
+    </div>
+      <div class="col-sm">
+     <div class="card" style="width: 15rem;">
+  <div class="card-body">
+    <h5 class="card-title">Сергей</h5>
+    <h6 class="card-subtitle mb-2 text-muted">12.04.2020 11:18</h6>
+    <p class="card-text">Рекомендую всем, кто ценит своё время! Удивили сроки от прохождения обучения до получения аттестаций.
+        Поверьте мне есть с чем сравнить. В общем только благоприятное впечатление от сотрудничества!</p>
+  </div>
+</div>
+    </div>
+      <div class="col-sm">
+     <div class="card" style="width: 16rem;">
+  <div class="card-body">
+    <h5 class="card-title">Валентина</h5>
+    <h6 class="card-subtitle mb-2 text-muted">27.06.2020 10:08</h6>
+    <p class="card-text">Центр для тех, кто хочет получить знания быстро, качественно и недорого. Все понравилось!</p>
+  </div>
+</div>
+    </div>
+  </div>
+  </div>
+
+</section>
+
+
+        <section class="masthead mb-4 py-4" style="background-image: url('/media/images/какмыработаем2.jpg')">
+        <center><form>
+            <p class="text-white display-5 fs-2">Заказать звонок</p>
+      <div class="form-group w-25">
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ваше имя">
+      </div>
+      <div class="form-group w-25">
+        <label class="text-white" for="formGroupExampleInput2"></label>
+        <input type="text" class="form-control mb-2" id="formGroupExampleInput2" placeholder="Ваш телефон">
+      </div>
+            <button type="button py-4" class="btn btn-light">Заказать звонок</button>
+    </form>
+            </center>
+    </section>
+
+    <section>
+        <p class="text-center display-5 fs-2">Полезные ссылки</p>
+<div class="container mb-4">
+  <div class="jumbotron">
+    <div class="row vertical-align">
+      <div class="col-2">
+        <a href="http://school-collection.edu.ru/" title=""><img src="/media/images/s1.png" class="img-responsive"></a>
+      </div>
+    <div class="col-2">
+        <a href="https://edu.ru/" title=""><img src="/media/images/s2.png" class="img-responsive"></a>
+    </div>
+    <div class="col-2">
+        <a href="https://obrnadzor.gov.ru/" title=""><img src="/media/images/s3.png" class="img-responsive"></a>
+    </div>
+    <div class="col-2">
+        <a href="https://www.gosuslugi.ru/" title=""><img src="/media/images/s4.png" class="img-responsive"></a>
+    </div>
+    <div class="col-2">
+        <a href="https://minobrnauki.gov.ru/" title=""><img src="/media/images/s5.png" class="img-responsive"></a>
+    </div>
+    <div class="col-2">
+        <a href="https://edu.gov.ru/" title=""><img src="/media/images/s6.png" class="img-responsive"></a>
+    </div>
+    <div class="col-2">
+        <a href="http://nac.gov.ru/" title=""><img src="/media/images/s7.png" class="img-responsive"></a>
+    </div>
+    <div class="col-2">
+        <a href="https://ncpti.su/" title=""><img src="/media/images/s8.png" class="img-responsive"></a>
+    </div>
+    <div class="col-2">
+        <a href="http://персональныеданные.дети/" title=""><img src="/media/images/s9.png" class="img-responsive"></a>
+    </div>
+    <div class="col-2">
+        <a href="http://www.kremlin.ru/" title=""><img src="/media/images/s10.png" class="img-responsive"></a>
+    </div>
+    <div class="col-2">
+        <a href="https://растимдетей.рф/" title=""><img src="/media/images/s11.png" class="img-responsive"></a>
+    </div>
+    <div class="col-2">
+        <a href="https://bus.gov.ru/" title=""><img src="/media/images/s12.png" class="img-responsive"></a>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+    </section>
+    <div class="container">{% block content %} {% endblock %}</div>
+
+
+</body>
+
+<footer class="bg-secondary text-white text-center text-md-start mt-auto">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">УЦПК</h5>
+
+          <p>
+            НОЧУ ДПО "Уральский центр подготовки кадров
+            <div>Адрес: г. Екатеринбург, ул. Чебышева, д. 6, оф. 319</div>
+            <div>Телефон: +7 (343) 201-44-24</div>
+            E-mail: ural-cpk@mail.ru
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Обратная связь</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">VK</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">WhatsApp</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Telegram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <a class="text-white" href="/">УЦПК</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

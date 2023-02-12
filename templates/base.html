@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>Уральский Центр Подготовки Кадров</title>
+    <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
+    <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
+    <title>НОЧУ ДПО "Уральский центр подготовки кадров", г.Екатеринбург</title>
 
 {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <link rel="icon" type="image/x-icon" href="/media/images/favicon.ico">
 </head>
 
-<main class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 <header class="d-flex flex-wrap justify-content-center py-3 mb-3 border-bottom masthead"
         style="background-image: url('/media/images/coverage-bg-03.jpg')">
@@ -22,8 +25,9 @@
 
           <span class="fs-5">Негосударственное образовательное частное учреждение
               <br>дополнительного профессионального образования <br> <h1 class="fs-2">Уральский Центр Подготовки Кадров <br></h1><span class="fs-5">г. Екатеринбург, ул. Чебышева, д. 6, оф. 319 <br>
-Телефон: +7 (343) 201-44-24</span></span>
+Телефон: +7 (343) 201-44-24 <a href="/map">Карта сайта </a>&nbsp &nbsp &nbsp &nbsp &nbsp</span></span>
       </a>
+    <a href="#" id="specialButton"><img id="" src="/media/images/special.png"  alt="Версия для слабовидящих" title="Версия для слабовидящих"/> Версия для слабовидящих</a>
 </header>
 
 <header class="d-flex flex-wrap justify-content-center py-4 mb-4 border-bottom">
@@ -34,26 +38,179 @@
         <button
           id="btnGroupDrop1"
           type="button"
-          class="{% block navig_btn_geo %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          class="{% block navig_btn_my %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
           data-bs-toggle="dropdown"
           aria-expanded="false">
             Cведения об образовательной организации
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <li><a class="dropdown-item btn-xl" href="/second">Second link</a></li>
-          <li><a class="dropdown-item btn-xl" href="#">Dropdown link</a></li>
+          <li><a class="dropdown-item btn-xl" href="/main_info">Основные сведения</a></li>
+          <li><a class="dropdown-item btn-xl" href="/structur">Структура и органы управления образовательной организацией</a></li>
+          <li><a class="dropdown-item btn-xl" href="/document">Документы</a></li>
+            <li><a class="dropdown-item btn-xl" href="/education">Образование</a></li>
+            <li><a class="dropdown-item btn-xl" href="/education_standart">Образовательные стандарты</a></li>
+            <li><a class="dropdown-item btn-xl" href="/cast">Руководство. Педагогический (научно-педагогический) состав</a></li>
+            <li><a class="dropdown-item btn-xl" href="/security">Материально-техническое обеспечение и оснащенность образовательного процесса</a></li>
+            <li><a class="dropdown-item btn-xl" href="/scholarship">Стипендии и меры поддержки обучающихся</a></li>
+            <li><a class="dropdown-item btn-xl" href="/paid_services">Платные образовательные услуги</a></li>
+            <li><a class="dropdown-item btn-xl" href="/financially">Финансово-хозяйственная деятельность</a></li>
+            <li><a class="dropdown-item btn-xl" href="/vacant">Вакантные места для приема (перевода) обучающихся</a></li>
+            <li><a class="dropdown-item btn-xl" href="/accessible">Доступные среды</a></li>
+            <li><a class="dropdown-item btn-xl" href="/organ">Предписания органов, осуществляющих государственный контроль (надзор)</a></li>
+            <li><a class="dropdown-item btn-xl" href="/cooperation">Международное сотрудничество</a></li>
+            <li><a class="dropdown-item btn-xl" href="/distant">Дистанционное обучение</a></li>
         </ul>
         </div>
-        <li class="nav-item"><a href="#" class="nav-link btn-xl">Новости</a></li>
-        <li class="nav-item"><a href="#" class="nav-link btn-xl">Информация</a></li>
-        <li class="nav-item"><a href="#" class="nav-link btn-xl">Направления обучения</a></li>
-        <li class="nav-item"><a href="#" class="nav-link btn-xl">Заявка на обучение</a></li>
-        <li class="nav-item"><a href="#" class="nav-link btn-xl">Педагогам</a></li>
-        <li class="nav-item"><a href="#" class="nav-link btn-xl">Контакты</a></li>
+        <li class="nav-item"><a href="/news" class="{% block navig_btn_c  %}nav-link link-dark{% endblock %} btn-xl ">Новости</a></li>
+        <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_g %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Информация
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li><a class="dropdown-item btn-xl" href="/independet">Независимая оценка качества образования</a></li>
+          <li><a class="dropdown-item btn-xl" href="/corruption">Противодействие коррупции</a></li>
+          <li><a class="dropdown-item btn-xl" href="/antiterrorist">Антитеррористическое просвещение</a></li>
+        </ul>
+        </div>
+        <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_b %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Направления обучения
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li><a class="dropdown-item btn-xl" href="/occupational_safety">Охрана труда</a></li>
+          <li><a class="dropdown-item btn-xl" href="/first_help">Первая помощь</a></li>
+          <li><a class="dropdown-item btn-xl" href="/professions">Профессии</a></li>
+          <li><a class="dropdown-item btn-xl" href="/teachers">Повышение квалификаций педагогов</a></li>
+        </ul>
+        </div>
+        <li class="nav-item"><a href="/application" class="{% block navig_btn_f %} nav-link link-dark {% endblock %} btn-xl">Заявка на обучение</a></li>
+        <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_e %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Педагогам
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li><a class="dropdown-item btn-xl" href="/attestation">Аттестация</a></li>
+          <li><a class="dropdown-item btn-xl" href="/cabinet">Методический кабинет</a></li>
+        </ul>
+        </div>
+        <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_h %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Медиа
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item btn-xl" href="/photo">Фотогалерея</a></li>
+          <li><a class="dropdown-item btn-xl" href="/404">Видеотека</a></li>
+          <li><a class="dropdown-item btn-xl" href="/quests">Опрос</a></li>
+        </ul>
+        </div>
+        <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="{% block navig_btn_d %} nav-link link-dark dropdown-toggle {% endblock %} btn-xl"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+            Контакты
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item btn-xl" href="/contacts">Контакты</a></li>
+          <li><a class="dropdown-item btn-xl" href="/contacts/faq">Часто задаваемые вопросы</a></li>
+          <li><a class="dropdown-item btn-xl" href="/contacts/comments">Отзывы и предложения</a></li>
+          <li><a class="dropdown-item btn-xl" href="/contacts/appeals">Обращения граждан</a></li>
+        </ul>
+        </div>
       </ul>
     </header>
 
-<div class="container border py-4 mb-4 ">{% block content %} {% endblock %}</div>
+<div class="container border py-4 mb-4 bg-light rounded-3 fs-5">{% block content %} {% endblock %}</div>
+
+<div class="container mb-4">
+  <div class="row">
+    <div class="col-3 mb-4">
+              <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Публикаций
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><p class="text-black">12 февраля 2021</p> <a href="/news/">Новый сайт образовательной организации</a></li>
+            <li class="list-group-item"><p class="text-black">9 октября 2020</p> <a href="/news/">Врач и студент</a></li>
+            <li class="list-group-item"><p class="text-black">7 сентября 2020</p> <a href="/news/">Грипп - симптомы и профилактика</a></li>
+          </ul>
+                  <a class="btn btn-primary" href="/news/" role="button">Все публикации</a>
+        </div>
+  </div>
+    <div class="col-3 mb-4">
+      <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Документы
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+					<p>Лицензия НОЧУ ДПО УЦПК</p>
+					<img width="20" src="https://cpk-ural.ru/upload/icons/pdf.png" alt="" class="px-1"><a href="/404/">Скачать</a>
+            </li>
+            <li class="list-group-item"><p>Приложение к лицензии</p>
+					<img width="20" src="https://cpk-ural.ru/upload/icons/pdf.png" alt="" class="px-1"><a href="/404">Скачать</a></li>
+            <li class="list-group-item"><p>Устав</p>
+					<img width="20" src="https://cpk-ural.ru/upload/icons/pdf.png" alt="" class="px-1"><a href="/404">Скачать</a></li>
+          </ul>
+
+        </div>
+    </div>
+      <div class="col-3 mb-4">
+          <div class="card" style="width: 18rem;">
+              <div class="card-header">Фотогалерея</div>
+          <img class="card-img-top" src="https://pulse.imgsmail.ru/imgpreview?mb=pulse&key=pic679926029625532670" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text"></p>
+            <a href="/photo" class="btn btn-primary">Все фотографии</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 mb-4">
+          <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Заказать обратный звонок
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><form>
+              <div class="form-group mb-4">
+                <label for="exampleInputEmail1">Представьтесь</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Имя">
+                <small id="emailHelp" class="form-text text-muted"></small>
+              </div>
+              <div class="form-group mb-4">
+                <label for="exampleInputPassword1">Номер телефона</label>
+                <input type="text" class="form-control" id="exampleInput" placeholder="Номер телефона">
+              </div>
+              <button type="submit" class="btn btn-primary">Заказать звонок</button>
+            </form></li>
+          </ul>
+        </div>
+      </div>
+</div>
+</div>
+
 </body>
 
 <footer class="bg-secondary text-white text-center text-md-start mt-auto">
@@ -77,7 +234,7 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white">VK</a>
+              <a href="https://vk.com/uralcpk" class="text-white">VK</a>
             </li>
             <li>
               <a href="#!" class="text-white">WhatsApp</a>
@@ -87,28 +244,10 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-0">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      <a class="text-white" href="https://mdbootstrap.com/">УЦПК</a>
+      <a class="text-white" href="/">УЦПК</a>
     </div>
     <!-- Copyright -->
   </footer>

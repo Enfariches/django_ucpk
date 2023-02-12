@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block navig_btn_d %}
+    nav-link active
+{% endblock %}
+{% load static %}
+{% block content %}
+    <div class="wrap">
+           <div class="crumbs"><a href="https://cpk-ural.ru">Главная</a> / <a href="https://cpk-ural.ru/kontakty">Контакты</a> / <span>Отзывы и предложения</span></div>
+    <section>
+	<h1 class="title"><span>Отзывы и предложения</span></h1>
+		    <div class="messages guestbook">
+	        	            <div class="text_questbook">
+	                <p>
+	Напишите свой вопрос, отзыв или пожелание. Все сообщения проходят модерацию! После рассмотрения администрацией сайта, ваше сообщение будет опубликовано на этой же странице. Ответ сотрудников образовательного учреждения, если такое требуется, будет опубликован под вашим сообщением.</p>
+<p>
+	&nbsp;</p>
+	            </div>
+	        			<div id="form"><div class="msg"></div>
+		<form action="?" method="POST" style="overflow: hidden; display: none;" class="bootstrap standart-form form-horizontal 13" enctype="multipart/form-data" id="message">
+			<div class="control-group">
+				<label class="control-label" for="i_name">Ваше имя:</label>				<div class="controls">
+			     	<input type="text" name="name" id="i_name" class="span0 forvalidation  value_Null" placeholder="" value="" idel="1" after_this="after1" valid="false"><p id="after1" class="valid_after"> &nbsp; </p>			    </div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="i_squery">Текст сообщения:</label>				<div class="controls">
+			     	<textarea name="squery" id="i_squery" class="span0 forvalidation  value_Null" style="height:100px; " idel="2" after_this="after2" valid="false"></textarea><p id="after2" class="valid_after"> &nbsp; </p>			    </div>
+			</div>
+
+    		<div class="control-group">
+                        <div class="controls">
+                <div class="g-recaptcha" data-sitekey="6LdhUREUAAAAAAyPDpJDLnUGTSAjwjqBW6OeOORi"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdhUREUAAAAAAyPDpJDLnUGTSAjwjqBW6OeOORi&amp;co=aHR0cHM6Ly9jcGstdXJhbC5ydTo0NDM.&amp;hl=ru&amp;v=gEr-ODersURoIfof1hiDm7R5&amp;size=normal&amp;cb=9p8ohqu2wm0i" width="304" height="78" role="presentation" name="a-ntkchzh6sqjg" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+            </div>
+        </div>
+    			<div class="control-group">
+				<div class="controls">
+					<button name="submit" class="my_btn btn">Отправить</button>
+			    </div>
+			</div>
+		</form>
+<script src="/js/jquery.validation_form.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+		//	$('.fileupload').fileupload();
+    	var options_comment = {
+        validation_form: ".standart-form" ,//class формы, которую будем проверять
+        only_visible: false ,
+				submit: "submit_x" ,
+        blur_all: false ,
+        min_user: 3,
+        important_marker: ""
+        }
+         $().validateThis(options_comment);
+		 //$().validateThis(options_comment);
+    });
+</script>
+</div>
+	        	        		       <div class="d_table w100p mb20">
+		        	 <div class="question d_cell va_t w100p guestbook_text">
+                   <div class="guestbook_trg_user"></div>
+		        	        		        	    <p class="p"><span class="name">ООО "Хлеб и зрелища"</span> <span class="fr date">21 января 2021 13:43</span></p>
+    		        	    		        	    		        	    <div class="question_text">Выражаем благодарность вашему коллективу за проведение обучения наших сотрудников и организацию их аттестации в Ростехнадзоре. Подготовка наших сотрудников проводилась на высоком профессиональном уровне, благодаря грамотной работе преподавателей, которые нашли индивидуальный подход к каждому слушателю, сделав процесс обучения эффективным и полезным.</div>
+		        	    		        	</div>
+		        	<div class="avatar d_cell va_t ta_r"><img src="https://cpk-ural.ru/images/avatar_none_user.jpg" alt=""></div>
+		        </div>
+		        		            <div class="d_table w100p mb20 answer  answ_0 ">
+		             <div class="avatar  d_cell va_t ta_l">
+                                               <img src="https://cpk-ural.ru/images/avatar_none_admin.jpg" alt="site365">
+                                      </div>
+		             <div class="d_cell va_t w100p  guestbook_text ">
+		                 <div class="guestbook_trg_admin"></div>
+                        <p class="ta_r p"><span class="fl date">21 января 2021 13:44</span><span class="name ">site365</span></p>
+                        <div class="answer_text ta_r "><p>Спасибо за ваш отзыв!<br></p></div>
+                    </div>
+		            </div>
+
+		        	        	        	        		       <div class="d_table w100p mb20">
+		        	 <div class="question d_cell va_t w100p guestbook_text">
+                   <div class="guestbook_trg_user"></div>
+		        	        		        	    <p class="p"><span class="name">Кирилл</span> <span class="fr date">12 января 2021 09:22</span></p>
+    		        	    		        	    		        	    <div class="question_text">Продолжаю обучаться в вашем центре и хочу сказать, что делаю это с огромным удовольствием. Очень приветливо встретили, всё подробно рассказали, продолжают окружать заботой в прямом смысле - чай, конфетки, добрый совет, весь необходимый материал. Всё, что нужно - всем помогут.</div>
+		        	    		        	</div>
+		        	<div class="avatar d_cell va_t ta_r"><img src="https://cpk-ural.ru/images/avatar_none_user.jpg" alt=""></div>
+		        </div>
+		        	        	        	        		       <div class="d_table w100p mb20">
+		        	 <div class="question d_cell va_t w100p guestbook_text">
+                   <div class="guestbook_trg_user"></div>
+		        	        		        	    <p class="p"><span class="name">Валентина</span> <span class="fr date">27 июня 2020 10:08</span></p>
+    		        	    		        	    		        	    <div class="question_text">Центр для тех, кто хочет получить знания быстро, качественно и недорого. Все понравилось!</div>
+		        	    		        	</div>
+		        	<div class="avatar d_cell va_t ta_r"><img src="https://cpk-ural.ru/images/avatar_none_user.jpg" alt=""></div>
+		        </div>
+		        		            <div class="d_table w100p mb20 answer  answ_2 ">
+		             <div class="avatar  d_cell va_t ta_l">
+                                               <img src="https://cpk-ural.ru/images/avatar_none_admin.jpg" alt="site365">
+                                      </div>
+		             <div class="d_cell va_t w100p  guestbook_text ">
+		                 <div class="guestbook_trg_admin"></div>
+                        <p class="ta_r p"><span class="fl date">27 июня 2020 10:42</span><span class="name ">site365</span></p>
+                        <div class="answer_text ta_r ">Спасибо за ваш отзыв!</div>
+                    </div>
+		            </div>
+
+		        	        	        	        		       <div class="d_table w100p mb20">
+		        	 <div class="question d_cell va_t w100p guestbook_text">
+                   <div class="guestbook_trg_user"></div>
+		        	        		        	    <p class="p"><span class="name">Сергей</span> <span class="fr date">12 апреля 2020 11:18</span></p>
+    		        	    		        	    		        	    <div class="question_text">Рекомендую всем, кто ценит своё время! Удивили сроки от прохождения обучения до получения аттестаций. Поверьте мне есть с чем сравнить. В общем только благоприятное впечатление от сотрудничества!</div>
+		        	    		        	</div>
+		        	<div class="avatar d_cell va_t ta_r"><img src="https://cpk-ural.ru/images/avatar_none_user.jpg" alt=""></div>
+		        </div>
+		        	        	        	        		       <div class="d_table w100p mb20">
+		        	 <div class="question d_cell va_t w100p guestbook_text">
+                   <div class="guestbook_trg_user"></div>
+		        	        		        	    <p class="p"><span class="name">Светлана Игоревна</span> <span class="fr date">27 ноября 2020 11:31</span></p>
+    		        	    		        	    		        	    <div class="question_text">Мне понравился Учебный центр. Обучение хорошее, диплом получила хороший. Спасибо!</div>
+		        	    		        	</div>
+		        	<div class="avatar d_cell va_t ta_r"><img src="https://cpk-ural.ru/images/avatar_none_user.jpg" alt=""></div>
+		        </div>
+		        	        	        	    </div>
+	    	    	<script>
+		 $('.redactor').redactor({
+	            buttons: ['html', '|', 'formatting', '|', 'bold', 'italic', 'deleted', '|',
+	                    'unorderedlist', 'orderedlist', '|', 'link', '|',
+	                    'fontcolor', '|','alignleft', 'aligncenter', 'alignright', 'justify', '|'],
+	            lang:'ru'});
+	</script>
+</section>
+
+    </div>
+{% endblock %}

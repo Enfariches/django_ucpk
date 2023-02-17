@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
 
 from django.conf import settings
 from django.conf.urls.static import static
 
+import app1.views
 from app1.views import index_page, second_page, first_help_page, occupational_page, teachers_page, professions_page,\
     forthypointforty_page, news_page, news_new_site_obr_page, medic_and_student_page, greep_page, hygienic_page, \
     prevention_page, virus_page, contacts_main_page, faq_page, appeals_page, comments_page, deal_page, cabinet_page,\

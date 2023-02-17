@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'app1',
     'gallery',
     'django',
-    'django_cleanup.apps.CleanupConfig'
 ]
 
 MIDDLEWARE = [

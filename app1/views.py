@@ -5,16 +5,16 @@ def index_page(request):
     return render(request, 'index.html')
 
 def first_help_page(request):
-    return render(request, 'Направления обучения/first_help.html')
+    return render(request, 'direction_study/first_help.html')
 
 def occupational_page(request):
-    return render(request, 'Направления обучения/occupational_safety.html')
+    return render(request, 'direction_study/occupational_safety.html')
 
 def professions_page(request):
-    return render(request, 'Направления обучения/professions.html')
+    return render(request, 'direction_study/professions.html')
 
 def teachers_page(request):
-    return render(request, 'Направления обучения/teachers.html')
+    return render(request, 'direction_study/teachers.html')
 
 def second_page(request):
     return render(request, 'second.html')
@@ -59,10 +59,10 @@ def deal_page(request):
     return render(request, 'contacts/deal.html')
 
 def attestation_page(request):
-    return render(request, 'Педагогам/attestation.html')
+    return render(request, 'teachers_page/attestation.html')
 
 def cabinet_page(request):
-    return render(request, 'Педагогам/cabinet.html')
+    return render(request, 'teachers_page/cabinet.html')
 
 def application_page(request):
     return render(request, 'application/application.html')
@@ -77,58 +77,59 @@ def corruption_page(request):
     return render(request, 'information/corruption.html')
 
 def photo_page(request):
-    return render(request, 'Медиа/photo.html')
+    return render(request, 'media_pages/photo.html')
 
 def video_page(request):
-    return render(request, 'Медиа/video.html')
+    return render(request, 'media_pages/video.html')
 
 def quests_page(request):
-    return render(request, 'Медиа/quests.html')
+    return render(request, 'media_pages/quests.html')
 
 def main_info_page(request):
-    return render(request, 'Сведения об образовательной организации/основные_сведения.html')
+    return render(request, 'information_base/main_information.html')
 
 def structur_page(request):
-    return render(request, 'Сведения об образовательной организации/Структура и органы управления образовательной организацией.html')
+    return render(request, 'information_base/structur.html')
 
 def document_page(request):
-    return render(request, 'Сведения об образовательной организации/документы.html')
+    return render(request, 'information_base/documents.html')
 
 def education_page(request):
-    return render(request, 'Сведения об образовательной организации/Образование.html')
+    return render(request, 'information_base/education.html')
 
 def education_standart_page(request):
-    return render(request, 'Сведения об образовательной организации/Образовательные стандарты.html')
+    return render(request, 'information_base/standart_education.html')
 
 def cast_page(request):
-    return render(request, 'Сведения об образовательной организации/Руководство.html')
+    return render(request, 'information_base/management.html')
 
 def security_page(request):
-    return render(request, 'Сведения об образовательной организации/Материально-техническое обеспечение.html')
+    return render(request, 'information_base/techical-obespejenia.html')
 
 def scholarship_page(request):
-    return render(request, 'Сведения об образовательной организации/Стипендии и меры поддержки обучающихся.html')
+    return render(request, 'information_base/stipend.html')
 
 def paid_services_page(request):
-    return render(request, 'Сведения об образовательной организации/Платные образовательные услуги.html')
+    return render(request, 'information_base/education_uslugi.html')
 
 def financially_page(request):
-    return render(request, 'Сведения об образовательной организации/Финансово-хозяйственная деятельность.html')
+    return render(request, 'information_base/economic.html')
 
 def vacant_page(request):
-    return render(request, 'Сведения об образовательной организации/Вакантные места для приема (перевода) обучающихся.html')
+    return render(request, 'information_base/vacancies.html')
 
 def accessible_page(request):
-    return render(request, 'Сведения об образовательной организации/Доступные среды.html')
+    return render(request, 'information_base/available_sredi.html')
 
 def organ_page(request):
-    return render(request, 'Сведения об образовательной организации/Предписания органов, осуществляющих государственный контроль (надзор).html')
+    return render(request,
+                  'information_base/control.html')
 
 def cooperation_page(request):
-    return render(request, 'Сведения об образовательной организации/Международное сотрудничество.html')
+    return render(request, 'information_base/collab.html')
 
 def distant_page(request):
-    return render(request, 'Сведения об образовательной организации/Дистанционное обучение.html')
+    return render(request, 'information_base/distant.html')
 
 def map_page(request):
     return render(request, 'map.html')
